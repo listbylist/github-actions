@@ -1,0 +1,20 @@
+name: 'npm-make-start'
+description: 'Runs make init and make {{path}} in an npm project'
+inputs:
+  path:
+    description: 'npm project path'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        cache: npm
+        cache-dependency-path: ${{ inputs.path }}/package-lock.json
+        node-version-file: ${{ inputs.path }}/package.json
+    - run: make init
+      shell: bash
+      working-directory: ${{ inputs.path }}
+    - run: make ${{ inputs.path }}
+      shell: bash
+      working-directory: ${{ inputs.path }}
