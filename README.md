@@ -2,26 +2,31 @@
 
 Reusable GitHub actions.
 
-> NB! Please fork this repo before using it in your projects.
+> [!IMPORTANT]
+> :point_up: Please fork this repo before using it in your projects.
 
 ## Actions
 
 ### npm-make-{prj,test}
 
-These actions setup nodejs, npm, make environment.
+Npm actions setup nodejs, npm, make environment. They expect package.json and package-lock.json files in the subproject directory.
 
-`npm-make-prj` - runs project by executing `make init` and `make (path)` inside subproject directory
+#### npm-make-prj
+
+Runs project by executing `make init` and `make (path)` inside subproject directory.
   
 ```yaml
-uses: ListByList/github-action/npm-make-prj@main
+uses: ListByList/github-actions/npm-make-prj@main
 with:
   path: subproject-path
 ```
   
-`npm-make-test` - runs tests by executing `make init-test` and `make test` inside subproject directory
+#### npm-make-test
+
+Runs tests by executing `make init-test` and `make test` inside subproject directory
 
 ```yaml
-uses: ListByList/github-action/npm-make-test@main
+uses: ListByList/github-actions/npm-make-test@main
 with:
   path: subproject-path
 ```
