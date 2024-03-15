@@ -30,3 +30,7 @@ uses: ListByList/github-actions/npm-make-test@main
 with:
   path: subproject-path
 ```
+
+## Licence
+
+The MIT License
