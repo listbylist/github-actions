@@ -1,6 +1,6 @@
-# lbl-github-actions
+# github-actions
 
-Reusable GitHub actions for ListByList.
+Reusable GitHub actions.
 
 > NB! Please fork this repo before using it in your projects.
 
