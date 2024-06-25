@@ -16,7 +16,7 @@ Npm actions setup nodejs, npm, make environment. They expect package.json and pa
 Runs project by executing `make init` and `make (path)` inside subproject directory.
   
 ```yaml
-uses: ListByList/github-actions/npm-make-prj@main
+uses: listbylist/github-actions/npm-make-prj@main
 with:
   path: subproject-path
 ```
@@ -26,7 +26,7 @@ with:
 Runs tests by executing `make init-test` and `make test` inside subproject directory
 
 ```yaml
-uses: ListByList/github-actions/npm-make-test@main
+uses: listbylist/github-actions/npm-make-test@main
 with:
   path: subproject-path
 ```
